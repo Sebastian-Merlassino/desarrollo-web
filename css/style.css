@@ -1,0 +1,308 @@
+/* RESETEO */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* -- Fuentes -- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+button, nav, a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+html, body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Hace que el body ocupe toda la pantalla */
+    overflow-x: hidden; /* Evita desbordamientos horizontales */
+}
+
+/*-- Encabezado --*/
+header {
+    z-index: 9999; /* queda por encima de los demas elementos fijados*/
+    position: sticky;
+    top: 0;/*fija el header*/
+    width: 100%;
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Separa los elementos */
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border-bottom: 1px solid grey; /* Línea debajo del header */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten cuando la ventana se achica */
+}
+
+/*Estilo para el logo */
+header img {
+    width: 96px; /* Fija el tamaño del logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilo para el menú de navegación */
+nav {
+    flex-grow: 1; /* Permite que el menú ocupe el espacio restante */
+}
+
+/* estilo para la lista del menú*/
+nav ul {
+    display: flex;
+    justify-content: center; /* Centra los elementos del menú */
+    list-style: none;/*saca los puntos de las listas desordenadas*/
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 30px; /* Espaciado entre los elementos del menú */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 25px;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: #448ff2; /* Cambia el color al pasar el mouse */
+}
+
+
+/*-- MAIN --*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos verticalmente */
+    width: 100%;
+    flex: 1; /* Hace que el contenido principal crezca y empuje el footer */
+}
+
+
+
+
+/*-- FOOTER __*/
+footer {
+    display: flex;
+    flex-direction:column;
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Separa los elementos */
+    background-color: #d9d9d9;
+    padding: 15px 0;
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    margin-top: auto; /* Empuja el footer hacia abajo si el contenido principal crece */
+    border-top: 1px solid grey; /* Línea debajo del header */
+
+}
+
+.contenedor-de-footer {
+    display: flex;
+    flex-direction:row;
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Separa los elementos */
+    width: 100%; /* O ajusta según sea necesario */
+    margin: 0 auto; /* Para centrar si es necesario */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten cuando la ventana se achica */
+}
+
+/*ajuste para el logo*/
+.logo-footer {
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; /* Separa los elementos */
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+    text-align: center;
+}
+
+.logo-footer img {
+    width: 300px; /* Ajusta el tamaño */
+    height: auto; /* Mantiene la proporción */
+}
+
+.redes-sociales-footer {
+    display: flex;
+    flex-direction:column;
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Separa los elementos */
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+    text-align: center;
+}
+
+.iconos-redes-sociales-footer {
+    display: flex;
+    flex-direction:row;
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Separa los elementos */ 
+    width: 30%;
+    margin: 0 auto;
+    
+}
+
+.contacto-footer {
+    display: flex;
+    flex-direction:column;
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Separa los elementos */
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+    text-align: center;
+}
+
+.contenedor-contacto {
+    display: flex;
+    flex-direction:row;
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Separa los elementos */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.whatsapp-footer, .cooreo-footer {
+    display: flex;
+    flex-direction:row;
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    width: 25%;
+    margin: 0 auto;
+}
+
+
+/* Ajuste para el copyright */
+.copyright-footer {
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center;
+}
+
+
+/*--  INICIO  */
+/*banner de página de inicio*/
+.contenedor-video-banner-inicio {
+    display: flex;
+    justify-content: center; /* Centra el video horizontalmente */
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+
+.video-banner-inicio {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/*sección servicio*/
+.servicios-inicio {
+    display: flex;
+    flex-direction:column;
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Separa los elementos */
+}
+
+.servicios-inicio a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.servicios-inicio h1 {
+    text-align: center;
+    width: 50%;
+    padding: 15px;
+    border: 5px solid #448ff2;
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
+
+
+
+
+
+
+
+/* -- SERVICIOS -- */
+
+
+
+
+
+
+
+
+
+/* -- Contacto --*/
+
+
+.contenedor-contacto-googlemaps{
+    display: grid;
+    grid-template-columns: 200px 200px;
+
+    width: 100%;
+    margin: 0 auto; 
+    padding: 25px 0;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Separa los elementos */
+    width: 50%; /* Que se ajuste al contenedor */
+    height: auto; /* Altura fija */
+}
+
+
+.googlemaps {
+    /*align-items:center; /* Centra verticalmente */
+    /*justify-content: space-between; /* Separa los elementos */
+    /*width: 50%; /* Que se ajuste al contenedor */
+    /*height: auto; 
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    /*border: 1px solid grey;*/
+    width: 100%; /* Hace que ocupe todo el ancho disponible */
+    height: 450px; /* Altura fija */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid #448ff2; /* Borde azul */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/*Estilos de rrelleno del formulario*/
+.formulario-contacto input [type="text"]:focus {
+    background-color:gainsboro;
+
+}
+
+
+
+
+/*  -- medida para tablets  --  */
+/*@media screen and (max-width: 1024px) {
+
+}
+
+
+/*  -- medida para celulares  --  */
+/*@media screen and (max-width: 780px) {
+    
+}*/
