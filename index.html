@@ -16,20 +16,31 @@
 </head>
 
 <body>
-    <!--encabezado-->
-
+    <!--encabezado desktop-->
     <header>
-        <!--<nav>
-            <ul> <!--ul>li*5>a
-                <li><a href="#">Inicio</a></li>
-                <li><a href="./views/Nosotros.html">Nosotros</a></li><!--enlace relativo (entre páginas dentro del mismo proyecto)
-                <li><a href="./views/Servicios.html">Servicios</a></li>
-                <li><a href="./views/Noticias.html">Noticias</a></li>
-                <li><a href="./views/Contacto.html">Contacto</a></li>
+        <nav class="navbar desktop-navbar">
+            <img src="./assets/img/Logopit_1546119869136.png" alt="Logotipo de Gestión SySO">
+            <ul class="nav nav-underline justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./views/nosotros.html">Nosotros</a>
+                </li><!--enlace relativo (entre páginas dentro del mismo proyecto)-->
+                <li class="nav-item">
+                    <a class="nav-link" href="./views/servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./views/noticias.html">Noticias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./views/contacto.html">Contacto</a>
+                </li>
             </ul>
-        </nav> -->
+        </nav>
 
-        <nav class="navbar bg-body-tertiary fixed-top">
+<!--encabezado mobile-->
+        <nav class="navbar bg-body-tertiary fixed-top mobile-navbar">
             <div class="container-fluid">
                 <img src="./assets/img/Logopit_1546119869136.png" alt="Logotipo de Gestión SySO">
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -46,24 +57,22 @@
                                 <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./views/Nosotros.html">Nosotros</a>
+                                <a class="nav-link" href="./views/nosotros.html">Nosotros</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./views/Servicios.html">Servicios</a>
+                                <a class="nav-link" href="./views/servicios.html">Servicios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./views/Noticias.html">Noticias</a>
+                                <a class="nav-link" href="./views/noticias.html">Noticias</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"  href="./views/Contacto.html">Contacto</a>
+                                <a class="nav-link"  href="./views/contacto.html">Contacto</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
-
-
 
     </header>
     
@@ -74,45 +83,69 @@
             <video class="video-banner-inicio" src="./assets/video/banner pagina web.mp4" autoplay loop></video>
         </div>
 
-        <section class="servicios-inicio">
-            <h1>
-            <a href="./views/Servicios.html">Nuestros servicios</a>
-            </h1>
+        <section class="servicios-inicio container text-center">
 
-            <div>
-                <img src="./assets/img/gears-1.png" alt="Gestión de Seguridad y Salud Ocupacional">
-                <h2>Gestión de Seguridad y Salud Ocupacional</h2>
+            <div class="row p-3 m-3">
+
+                <div class="col-12">
+                    <h1>
+                    <a href="./views/servicios.html">Nuestros servicios</a>
+                    </h1>
+                </div>
             </div>
 
-            <div>
-                <img src="./assets/img/fire_1.png" alt="Estudio de Carga de Fuego / Informe antisiniestral">
-                <h2>Estudio de Carga de Fuego / Informe antisiniestral</h2>
+            <div class="row p-3 m-3">
+
+                <div class="col-md-4 col-sm-12">   
+                    <div>
+                        <img src="./assets/img/gears-1.png" alt="Gestión de Seguridad y Salud Ocupacional">
+                        <h2 class="p-1 m-1">Gestión de Seguridad y Salud Ocupacional</h2>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div>
+                        <img src="./assets/img/fire_1.png" alt="Estudio de Carga de Fuego / Informe antisiniestral">
+                        <h2 class="p-1 m-1">Estudio de Carga de Fuego / Informe antisiniestral</h2>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div>
+                        <img src="./assets/img/exit-1_1.png" alt="Planes de autoprotección">
+                        <h2 class="p-1 m-1">Planes de autoprotección</h2>
+                    </div>
+                </div>
             </div>
 
-            <div>
-                <img src="./assets/img/exit-1_1.png" alt="Planes de autoprotección">
-                <h2>Planes de autoprotección</h2>
+            <div class="row p-3 m-3">
+                <div class="col-md-4 col-sm-12"> 
+                    <div>
+                        <img src="./assets/img/speedometer-1.png" alt="Estudios y Mediciones">
+                        <h2 class="p-1 m-1">Estudios y Mediciones</h2>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12"> 
+                    <div>
+                        <img src="./assets/img/helmet-1.png" alt="Programas de seguridad">
+                        <h2 class="p-1 m-1">Programas de seguridad</h2>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12"> 
+                    <div>
+                        <img src="./assets/img/teaching.png" alt="Capacitación y entrenamiento">
+                        <h2 class="p-1 m-1">Capacitación y entrenamiento</h2>
+                    </div>
+                </div>
             </div>
 
-            <div>
-                <img src="./assets/img/speedometer-1.png" alt="Estudios y Mediciones">
-                <h2>Estudios y Mediciones</h2>
+            <div class="row p-3 m-3">
+                <div class="col-12">
+                    <div>
+                        <img src="./assets/img/conveyor_1.png" alt="Ergonomía">
+                        <h2 class="p-1 m-1">Ergonomía</h2>
+                    </div>
+                </div>
             </div>
 
-            <div>
-                <img src="./assets/img/helmet-1.png" alt="Programas de seguridad">
-                <h2>Programas de seguridad</h2>
-            </div>
-
-            <div>
-                <img src="./assets/img/teaching.png" alt="Capacitación y entrenamiento">
-                <h2>Capacitación y entrenamiento</h2>
-            </div>
-
-            <div>
-                <img src="./assets/img/conveyor_1.png" alt="Ergonomía">
-                <h2>Ergonomía</h2>
-            </div>
         </section>
     </main>
 
@@ -128,14 +161,14 @@
                 <div class="contenedor-contacto">
                     <div class="whatsapp-footer">
                         <a href="https://api.whatsapp.com/send?phone=541159969956" target="_blank" title="Enviar Whatsapp">
-                            <img src="./assets/img/whatsapp.png" alt="Icono de Whatsapp" style="width: 32px; height: 32px;">
+                            <img src="./assets/img/whatsapp.png" alt="Icono de Whatsapp">
                         </a>
                         <a href="https://api.whatsapp.com/send?phone=541159969956">1159969956</a>
                     </div>
 
                     <div class="cooreo-footer">
                         <a href="mailto:info@gestionsyso.com" target="_blank" title="Enviar correo electrónico">
-                            <img src="./assets/img/email.png" alt="Icono de correo electrónico" style="width: 32px; height: 32px;">
+                            <img src="./assets/img/email.png" alt="Icono de correo electrónico">
                         </a>
                         <a href="mailto:info@gestionsyso.com">info@gestionsyso.com</a>
                     </div>
@@ -147,16 +180,16 @@
                 <!-- Enlace con la imagen de la red social -->
                 <div class="iconos-redes-sociales-footer">
                     <a href="https://www.facebook.com/GestionSySO/" target="_blank" title="Visítanos en Facebook">
-                        <img src="./assets/img/facebook.png" alt="Icono de Facebook" style="width: 32px; height: 32px;">
+                        <img src="./assets/img/facebook.png" alt="Icono de Facebook">
                     </a>
                     <a href="https://twitter.com/Gestion_SySO" target="_blank" title="Visítanos en Twitter">
-                        <img src="./assets/img/twitter.png" alt="Icono de Twitter" style="width: 32px; height: 32px;">
+                        <img src="./assets/img/twitter.png" alt="Icono de Twitter">
                     </a>
                     <a href="https://www.instagram.com/gestionsyso/" target="_blank" title="Visítanos en Instagram">
-                        <img src="./assets/img/instagram.png" alt="Icono de Instagram" style="width: 32px; height: 32px;">
+                        <img src="./assets/img/instagram.png" alt="Icono de Instagram">
                     </a>
                     <a href="https://www.linkedin.com/company/gestionsyso/" target="_blank" title="Visítanos en Linkedin">
-                        <img src="./assets/img/linkedin.png" alt="Icono de Linkedin" style="width: 32px; height: 32px;">
+                        <img src="./assets/img/linkedin.png" alt="Icono de Linkedin">
                     </a>
                 </div>
             </div>
