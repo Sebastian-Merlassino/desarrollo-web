@@ -1,5 +1,5 @@
 /* RESETEO */
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -9,7 +9,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
@@ -45,7 +50,9 @@ body {
     text-align: justify;
 }
 
-button, nav, a  {
+button,
+nav,
+a {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 24px;
@@ -54,38 +61,47 @@ button, nav, a  {
 
 /*-- BODY --*/
 
-html, body {
+html,
+body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Hace que el body ocupe toda la pantalla */
-    overflow-x: hidden; /* Evita desbordamientos horizontales */
+    height: 100vh;
+    /* Hace que el body ocupe toda la pantalla */
+    overflow-x: hidden;
+    /* Evita desbordamientos horizontales */
 }
 
 /*-- ENCABEZADO --*/
 
 header {
-    z-index: 9999; /* queda por encima de los demas elementos fijados*/
+    z-index: 9999;
+    /* queda por encima de los demas elementos fijados*/
     position: sticky;
-    top: 0;/*fija el header*/
+    top: 0;
+    /*fija el header*/
     width: 100%;
     padding: 10px 15px;
     background-color: #ffffff;
-    border-bottom: 1px solid grey; /* Línea debajo del header */
-    flex-wrap: wrap; /* Permite que los elementos se ajusten cuando la ventana se achica */
+    border-bottom: 1px solid grey;
+    /* Línea debajo del header */
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten cuando la ventana se achica */
     justify-content: space-between;
     align-items: center;
 }
 
 /*Estilo para el logo */
 header img {
-    width: 100px; /* Fija el tamaño del logo */
-    height: auto; /* Mantiene la proporción de la imagen */
+    width: 100px;
+    /* Fija el tamaño del logo */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
 }
 
 
 .desktop-navbar {
-    display: flex; 
+    display: flex;
     align-items: center;
     width: 100%;
     padding: 10px 0;
@@ -97,7 +113,8 @@ header img {
     list-style: none;
     padding: 0;
     margin: 0;
-    flex-grow: 1; /* Permite que el menú ocupe el espacio restante */
+    flex-grow: 1;
+    /* Permite que el menú ocupe el espacio restante */
 }
 
 .desktop-navbar ul li {
@@ -105,11 +122,12 @@ header img {
 }
 
 .mobile-navbar {
-    display: none; /* Oculta la mobile-navbar en dispositivos grandes */
+    display: none;
+    /* Oculta la mobile-navbar en dispositivos grandes */
 }
 
 .nav-link {
-    color:dimgrey;
+    color: dimgrey;
 }
 
 .nav-link.active {
@@ -117,18 +135,21 @@ header img {
 }
 
 .nav-link:hover {
-color: #448ff2; /* Cambia el color al pasar el mouse */
+    color: #448ff2;
+    /* Cambia el color al pasar el mouse */
 }
 
 
 /*-- MAIN --*/
 
 main {
-display: flex;
-flex-direction: column;
-align-items: center; /* Centra los elementos verticalmente */
-width: 100%;
-flex: 1; /* Hace que el contenido principal crezca y empuje el footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra los elementos verticalmente */
+    width: 100%;
+    flex: 1;
+    /* Hace que el contenido principal crezca y empuje el footer */
 }
 
 
@@ -136,94 +157,118 @@ flex: 1; /* Hace que el contenido principal crezca y empuje el footer */
 
 /*-- FOOTER __*/
 footer {
-display: flex;
-flex-direction:column;
-align-items: center; /* Centra los elementos verticalmente */
-justify-content: space-between; /* Separa los elementos */
-background-color: #d9d9d9;
-padding: 15px 0;
-width: 100%; /* Asegura que el footer ocupe todo el ancho */
-margin-top: auto; /* Empuja el footer hacia abajo si el contenido principal crece */
-border-top: 1px solid grey; /* Línea debajo del header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra los elementos verticalmente */
+    justify-content: space-between;
+    /* Separa los elementos */
+    background-color: #d9d9d9;
+    padding: 15px 0;
+    width: 100%;
+    /* Asegura que el footer ocupe todo el ancho */
+    margin-top: auto;
+    /* Empuja el footer hacia abajo si el contenido principal crece */
+    border-top: 1px solid grey;
+    /* Línea debajo del header */
 
 }
 
 .contenedor-de-footer {
-display: flex;
-flex-direction:row;
-align-items: center; /* Centra los elementos verticalmente */
-justify-content: space-between; /* Separa los elementos */
-width: 100%; /* O ajusta según sea necesario */
-margin: 0 auto; /* Para centrar si es necesario */
-flex-wrap: wrap; /* Permite que los elementos se ajusten cuando la ventana se achica */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Centra los elementos verticalmente */
+    justify-content: space-between;
+    /* Separa los elementos */
+    width: 100%;
+    /* O ajusta según sea necesario */
+    margin: 0 auto;
+    /* Para centrar si es necesario */
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten cuando la ventana se achica */
 }
 
 /*ajuste para el logo*/
 .logo-footer {
-display: flex;
-align-items: center; /* Centra los elementos verticalmente */
-justify-content: center; /* Separa los elementos */
-width: 100%;
-margin: 0 auto;
-flex: 1;
-text-align: center;
+    display: flex;
+    align-items: center;
+    /* Centra los elementos verticalmente */
+    justify-content: center;
+    /* Separa los elementos */
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+    text-align: center;
 }
 
 .logo-footer img {
-width: 300px; /* Ajusta el tamaño */
-height: auto; /* Mantiene la proporción */
+    width: 300px;
+    /* Ajusta el tamaño */
+    height: auto;
+    /* Mantiene la proporción */
 }
 
 .redes-sociales-footer {
-display: flex;
-flex-direction:column;
-align-items: center; /* Centra los elementos verticalmente */
-justify-content: space-between; /* Separa los elementos */
-width: 100%;
-margin: 0 auto;
-flex: 1;
-text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra los elementos verticalmente */
+    justify-content: space-between;
+    /* Separa los elementos */
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+    text-align: center;
 }
 
 .iconos-redes-sociales-footer {
-display: flex;
-flex-direction:row;
-align-items: center; /* Centra los elementos verticalmente */
-justify-content: space-between; /* Separa los elementos */ 
-width: 30%;
-margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Centra los elementos verticalmente */
+    justify-content: space-between;
+    /* Separa los elementos */
+    width: 30%;
+    margin: 0 auto;
 
 }
 
 .contacto-footer {
-display: flex;
-flex-direction:column;
-align-items: center; /* Centra los elementos verticalmente */
-justify-content: space-between; /* Separa los elementos */
-width: 100%;
-margin: 0 auto;
-flex: 1;
-text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra los elementos verticalmente */
+    justify-content: space-between;
+    /* Separa los elementos */
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+    text-align: center;
 }
 
 .contenedor-contacto {
-display: flex;
-flex-direction:row;
-align-items: center; /* Centra los elementos verticalmente */
-justify-content: space-between; /* Separa los elementos */
-width: 100%;
-margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Centra los elementos verticalmente */
+    justify-content: space-between;
+    /* Separa los elementos */
+    width: 100%;
+    margin: 0 auto;
 }
 
-.contenedor-contacto img, .iconos-redes-sociales-footer img {
-    width: 32px; 
+.contenedor-contacto img,
+.iconos-redes-sociales-footer img {
+    width: 32px;
     height: 32px;
 }
 
 /* Ajuste para el copyright */
 .copyright-footer {
-width: 100%; /* Ocupa todo el ancho */
-text-align: center;
+    width: 100%;
+    /* Ocupa todo el ancho */
+    text-align: center;
 }
 
 
@@ -232,26 +277,27 @@ text-align: center;
 
 /*banner de página de inicio*/
 .contenedor-video-banner-inicio {
-display: flex;
-justify-content: center; /* Centra el video horizontalmente */
-align-items: center;
-width: 100%;
-border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    /* Centra el video horizontalmente */
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid grey;
 }
 
 .video-banner-inicio {
-width: 100%;
-max-width: 100%;
-height: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 /*Inicio - sección servicio*/
 h1 a {
-text-decoration: none;
-color: #000000;
-font-family: 'Montserrat', sans-serif;
-font-weight: 700;
-font-size: 40px;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
 }
 
 .servicios-inicio {
@@ -259,7 +305,7 @@ font-size: 40px;
 }
 
 .servicios-inicio img {
-    width: 200px; 
+    width: 200px;
     height: auto;
 }
 
@@ -268,7 +314,7 @@ font-size: 40px;
 
 .nosotros {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: left;
     padding: 35px;
 }
@@ -280,13 +326,13 @@ font-size: 40px;
 
 .servicios {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: left;
     padding: 35px;
 }
 
 .servicios img {
-    width: 200px; 
+    width: 200px;
     height: auto;
 }
 
@@ -295,7 +341,7 @@ font-size: 40px;
 /* -- NOTICIAS -- */
 .noticias {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: left;
     padding: 35px;
 }
@@ -305,11 +351,13 @@ font-size: 40px;
 
 .contenedor-contacto-googlemaps {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Distribución flexible */
-    gap: 20px; /* Espaciado entre columnas */
+    grid-template-columns: 1fr 1fr;
+    /* Distribución flexible */
+    gap: 20px;
+    /* Espaciado entre columnas */
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto; 
+    margin: 0 auto;
     padding: 35px;
 }
 
@@ -320,18 +368,24 @@ font-size: 40px;
     align-items: center;
     justify-content: space-between;
     width: 50%;
-    max-width: 500px; /* Para que no se haga demasiado grande */
+    max-width: 500px;
+    /* Para que no se haga demasiado grande */
     height: auto;
     margin: 15px;
 }
 
 /* Estilos de Google Maps */
 .googlemaps {
-    width: 100%; /* Ocupar todo el ancho disponible */
-    height: 450px; /* Altura fija */
-    border-radius: 10px; /* Bordes redondeados */
-    border: 2px solid #448ff2; /* Borde azul */
-    box-shadow: 5px 5px 15px gray; /* Sombra */
+    width: 100%;
+    /* Ocupar todo el ancho disponible */
+    height: 450px;
+    /* Altura fija */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    border: 2px solid #448ff2;
+    /* Borde azul */
+    box-shadow: 5px 5px 15px gray;
+    /* Sombra */
 }
 
 
@@ -347,7 +401,8 @@ font-size: 40px;
     .mobile-navbar {
         display: flex;
     }
-    .desktop-navbar{
+
+    .desktop-navbar {
         display: none;
     }
 
@@ -355,7 +410,8 @@ font-size: 40px;
         font-size: 16px;
     }
 
-    h1, h1 a {
+    h1,
+    h1 a {
         font-size: 28px;
     }
 
@@ -379,11 +435,14 @@ font-size: 40px;
         font-size: 12px;
     }
 
-    nav, a, button {
+    nav,
+    a,
+    button {
         font-size: 16px;
     }
-    
-    header, header * {
+
+    header,
+    header * {
         background-color: #ffffff !important;
     }
 
@@ -392,8 +451,9 @@ font-size: 40px;
         height: auto;
     }
 
-    .servicios-inicio img, .servicios img {
-        width: 120px; 
+    .servicios-inicio img,
+    .servicios img {
+        width: 120px;
         height: auto;
     }
 
@@ -403,7 +463,8 @@ font-size: 40px;
     }
 
     .contenedor-contacto-googlemaps {
-        grid-template-columns: 1fr; /* Solo una columna en móviles */
+        grid-template-columns: 1fr;
+        /* Solo una columna en móviles */
         gap: 10px;
     }
 
@@ -418,23 +479,24 @@ font-size: 40px;
 
 /* Escritorio (≥ 768px) */
 @media (min-width: 768px) {
-    
+
     body {
         font-size: 18px;
     }
-    
-    h1, h1 a {
+
+    h1,
+    h1 a {
         font-size: 32px;
     }
-    
+
     h2 {
         font-size: 28px;
     }
-    
+
     h3 {
         font-size: 24px;
     }
-    
+
     h4 {
         font-size: 22px;
     }
@@ -447,16 +509,20 @@ font-size: 40px;
         font-size: 14px;
     }
 
-    nav, a, button {
+    nav,
+    a,
+    button {
         font-size: 18px;
     }
+
     header img {
         width: 85px;
         height: auto;
     }
 
-    .servicios-inicio img, .servicios img {
-        width: 150px; 
+    .servicios-inicio img,
+    .servicios img {
+        width: 150px;
         height: auto;
     }
 
@@ -469,23 +535,24 @@ font-size: 40px;
 
 /* Escritorio (≥ 1024px) */
 @media (min-width: 1024px) {
-    
+
     body {
         font-size: 20px;
     }
-    
-    h1, h1 a {
+
+    h1,
+    h1 a {
         font-size: 36px;
     }
-    
+
     h2 {
         font-size: 30px;
     }
-    
+
     h3 {
         font-size: 26px;
     }
-    
+
     h4 {
         font-size: 24px;
     }
@@ -498,16 +565,20 @@ font-size: 40px;
         font-size: 16px;
     }
 
-    nav, a, button {
+    nav,
+    a,
+    button {
         font-size: 20px;
     }
+
     header img {
         width: 95px;
         height: auto;
     }
 
-    .servicios-inicio img, .servicios img {
-        width: 200px; 
+    .servicios-inicio img,
+    .servicios img {
+        width: 200px;
         height: auto;
     }
 
