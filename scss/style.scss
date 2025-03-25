@@ -1,0 +1,499 @@
+/*compilar: sass --watch scss/style.scss css/style.css*/
+
+/*-- RESET GENERAL  --*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*-- FUENTES  --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*-- VARIABLES DE FUENTES Y COLORES--*/
+
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
+$font-tertiary: 'Inter', sans-serif;
+$color-dimgrey: dimgrey;
+$color-black: #000000;
+$color-blue: #448ff2;
+$color-lightgray: #d9d9d9;
+$color-grey: grey;
+$color-white: #ffffff;
+
+/*--  MIXINS  --*/
+
+@mixin font-family($font) {
+    font-family: $font, sans-serif;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+}
+
+@mixin image-styles($width, $height: auto) {
+    width: $width;
+    height: $height;
+}
+
+@mixin media-max($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+/*--  EXTEND ESTILOS --*/
+
+%heading-styles {
+    @include font-family($font-secondary);
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend %heading-styles;
+}
+
+/*--  BUCLE PARA TAMAÑO DE ENCABEZADOS  --*/
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        @include font-size(36px - ($i - 1) * 4px);
+    }
+}
+
+/*--  ESTILOS GENERALES  --*/
+
+body {
+    @include font-family($font-primary);
+    @include font-size(20px);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+button,
+nav,
+a {
+    @include font-family($font-tertiary);
+    font-weight: 600;
+    @include font-size(20px);
+}
+
+html,
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/*-- ENCABEZADO --*/
+
+header {
+    z-index: 9999;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-grey;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        @include image-styles(100px);
+    }
+}
+
+/*--  ENCABEZADO: navbar  --*/
+
+.desktop-navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+
+        li {
+            margin: 0 15px;
+        }
+    }
+}
+
+.mobile-navbar {
+    display: none;
+}
+
+.nav-link {
+    color: $color-dimgrey;
+
+    &.active {
+        color: $color-black;
+    }
+
+    &:hover {
+        color: $color-blue;
+    }
+}
+
+/*--  MAIN  --*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+}
+
+/*-- FOOTER  --*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-lightgray;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: auto;
+    border-top: 1px solid $color-grey;
+
+    a {
+        text-decoration: none;
+        color: $color-black;
+    }
+}
+
+.contenedor-de-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+    text-align: center;
+
+    img {
+        @include image-styles(300px);
+    }
+}
+
+.redes-sociales-footer, .contacto-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px auto;
+    flex: 1;
+    text-align: center;
+}
+
+.iconos-redes-sociales-footer, .contenedor-contacto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.iconos-redes-sociales-footer img, .contenedor-contacto img {
+    @include image-styles(32px);
+    margin: 5px;
+}
+
+.copyrigh-footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/*--  INICIO  --*/
+
+.contenedor-video-banner-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid $color-grey;
+}
+
+.video-banner-inicio {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/*--  INICIO: Servicio  --*/
+
+h1 a {
+    text-decoration: none;
+    color: $color-black;
+    @extend %heading-styles;
+    @include font-size(40px);
+}
+
+.servicios-inicio,
+.servicios,
+.nosotros,
+.noticias {
+    padding: 35px;
+
+    img {
+        @include image-styles(200px);
+    }
+}
+
+/*--  NOSOTROS  --*/
+
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 35px;
+}
+
+/*--  SERVICIOS  --*/
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 35px;
+}
+
+.servicios img {
+    width: 200px;
+    height: auto;
+}
+
+/*--  NOTICIAS  --*/
+
+.noticias {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 35px;
+}
+
+/*--  CONTACTO  --*/
+
+.contenedor-contacto-googlemaps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px;
+}
+
+/* Estilos de formulario */
+.custom-fieldset {
+    height: 100%;
+    border: 2px solid $color-grey;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.custom-fieldset legend {
+    @include font-family($font-secondary);
+    @include font-size(24px);
+    font-weight: bold;
+    color: $color-black;
+    padding: 0;
+}
+
+/* Estilos de Google Maps */
+.googlemaps {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid $color-blue;
+    box-shadow: 0px 0px 15px 5PX $color-grey;
+}
+
+/*--  MEDIA QUERIES  --*/
+@include media-max(1024px) {
+
+    body,
+    button,
+    nav,
+    a {
+        @include font-size(18px);
+    }
+
+    h1,
+    h1 a {
+        @include font-size(32px);
+    }
+
+    h2 {
+        @include font-size(28px);
+    }
+
+    h3 {
+        @include font-size(24px);
+    }
+
+    h4 {
+        @include font-size(20px);
+    }
+
+    h5 {
+        @include font-size(16px);
+    }
+
+    h6 {
+        @include font-size(14px);
+    }
+
+    header img {
+        @include image-styles(95px);
+    }
+
+    .servicios-inicio img,
+    .servicios img {
+        @include image-styles(200px);
+    }
+
+    .logo-footer img {
+        @include image-styles(250px);
+    }
+
+    .desktop-navbar {
+        display: none;
+    }
+
+    .mobile-navbar {
+        display: flex;
+    }
+
+    .contenedor-contacto-googlemaps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include media-max(768px) {
+
+    body,
+    button,
+    nav,
+    a {
+        @include font-size(14px);
+    }
+
+    h1,
+    h1 a {
+        @include font-size(24px);
+    }
+
+    h2 {
+        @include font-size(20px);
+    }
+
+    h3 {
+        @include font-size(18px);
+    }
+
+    h4 {
+        @include font-size(16px);
+    }
+
+    h5 {
+        @include font-size(14px);
+    }
+
+    h6 {
+        @include font-size(12px);
+    }
+
+    header,
+    header * {
+        background-color: $color-white !important;
+    }
+
+    header img {
+        @include image-styles(75px);
+    }
+
+    .servicios-inicio img,
+    .servicios img {
+        @include image-styles(120px);
+    }
+
+    .logo-footer img {
+        @include image-styles(150px);
+    }
+
+    .contenedor-contacto-googlemaps {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .formulario-contacto {
+        width: 100%;
+    }
+
+    .googlemaps {
+        height: 350px;
+    }
+
+    .contenedor-de-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-footer img {
+        @include image-styles(200px);
+    }
+
+    .contacto-footer {
+        text-align: center;
+    }
+}
+
+@include media-max(480px) {
+    .iconos-redes-sociales-footer {
+        width: 50%;
+    }
+
+    .iconos-redes-sociales-footer img,
+    .contenedor-contacto img {
+        @include image-styles(24px);
+    }
+
+    .formulario-contacto {
+        width: 90%;
+    }
+
+    .googlemaps {
+        height: 300px;
+    }
+}

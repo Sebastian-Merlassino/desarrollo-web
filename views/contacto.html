@@ -79,29 +79,28 @@
     <main><!--contenido principal de la página-->
 
         <section class="contenedor-contacto-googlemaps">
-            <div class="formulario-contacto">
-                <h2>Envianos tu consulta</h2>
-                <form action="/submit" method="post"><!--etiqueta contenedora del formulario-->
-                    <fieldset>
-                        <legend>Formulario de contacto</legend>
+            <form action="/submit" method="post">
+                <fieldset class="custom-fieldset">
+                    <legend>Envianos tu consulta</legend>
 
-                        <div>
-                            <label for="nombre">Nombre y apellido:</label>
-                            <input type="text" name="Nombre-y-apellido" id="nombre-y-apellido">
-                        </div>
-                        <div>
-                            <label for="email">Email:</label>
-                            <input type="email" name="email" id="email">
-                        </div>
-                        <div>
-                            <label for="mensaje">Mensaje:</label>
-                            <textarea name="mensaje" id="mensaje"></textarea>
-                        </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre y apellido:</label>
+                        <input type="text" name="Nombre-y-apellido" id="nombre-y-apellido" class="form-control">
+                    </div>
 
-                        <input type="submit" value="Enviar">
-                    </fieldset>
-                </form>
-            </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" name="email" id="email" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje:</label>
+                        <textarea name="mensaje" id="mensaje" class="form-control"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </fieldset>
+            </form>
 
             <div class="contenedor-googlemaps">
                 <iframe class="googlemaps"
