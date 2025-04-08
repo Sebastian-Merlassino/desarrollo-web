@@ -68,14 +68,12 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  overflow-x: hidden;
+  height: 100%;
 }
 
 /*-- ENCABEZADO --*/
 header {
   z-index: 9999;
-  position: sticky;
   top: 0;
   width: 100%;
   padding: 10px 15px;
@@ -106,7 +104,7 @@ header img {
   flex-grow: 1;
 }
 .desktop-navbar ul li {
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 .mobile-navbar {
