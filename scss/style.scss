@@ -101,6 +101,7 @@ header {
     z-index: 9999;
     // position: sticky;
     top: 0;
+    height: 80px;
     width: 100%;
     padding: 10px 15px;
     background-color: $color-white;
@@ -160,6 +161,7 @@ main {
     align-items: center;
     width: 100%;
     flex: 1;
+
 }
 
 /*-- FOOTER  --*/
