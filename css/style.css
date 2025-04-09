@@ -77,7 +77,6 @@ header {
   top: 0;
   height: 80px;
   width: 100%;
-  padding: 10px 15px;
   background-color: #ffffff;
   border-bottom: 1px solid grey;
   flex-wrap: wrap;
@@ -87,6 +86,7 @@ header {
 header img {
   width: 100px;
   height: auto;
+  padding-left: 10px;
 }
 
 /*--  ENCABEZADO: navbar  --*/
@@ -94,7 +94,6 @@ header img {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 10px 0;
 }
 .desktop-navbar ul {
   display: flex;
@@ -129,6 +128,7 @@ main {
   align-items: center;
   width: 100%;
   flex: 1;
+  margin-top: 80px;
 }
 
 /*-- FOOTER  --*/
@@ -328,6 +328,12 @@ h1 a {
   h6 {
     font-size: 14px;
   }
+  header {
+    height: 70px;
+  }
+  main {
+    margin-top: 70px;
+  }
   header img {
     width: 95px;
     height: auto;
@@ -349,7 +355,6 @@ h1 a {
   }
   .mobile-navbar {
     display: flex;
-    padding-left: 5px;
   }
   .offcanvas {
     width: 300px !important;
@@ -386,6 +391,12 @@ h1 a {
   }
   h6 {
     font-size: 12px;
+  }
+  header {
+    height: 64px;
+  }
+  main {
+    margin-top: 64px;
   }
   header img {
     width: 75px;
@@ -431,6 +442,12 @@ h1 a {
 @media (max-width: 480px) {
   .bg-body-tertiary {
     background-color: #ffffff !important;
+  }
+  header {
+    height: 64px;
+  }
+  main {
+    margin-top: 64px;
   }
   .iconos-redes-sociales-footer {
     width: 50%;
