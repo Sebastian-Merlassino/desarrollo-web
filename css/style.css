@@ -225,7 +225,7 @@ footer a {
 
 .iconos-redes-sociales-footer img,
 .contenedor-contacto img {
-  width: 40px;
+  width: 50px;
   height: auto;
   margin: 5px;
   transition: transform 0.4s ease;
@@ -595,6 +595,11 @@ hr {
   }
   .contacto-footer {
     text-align: center;
+  }
+  .iconos-redes-sociales-footer img,
+  .contenedor-contacto img {
+    width: 36px;
+    height: auto;
   }
   .sticky-whatsapp a {
     width: 50px;
