@@ -80,6 +80,8 @@ body {
     @include font-size(20px);
     line-height: 1.6;
     text-align: justify;
+    cursor: url('../assets/img/cursor.cur'), default !important;
+
 }
 
 button,
@@ -88,6 +90,8 @@ a {
     @include font-family($font-tertiary);
     font-weight: 600;
     @include font-size(20px);
+    cursor: url('../assets/img/hand-cursor.cur'), pointer !important;
+
 }
 
 html,
@@ -96,7 +100,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    // overflow-x: hidden;
+
 }
 
 /*-- ENCABEZADO --*/
@@ -508,13 +512,43 @@ hr {
     padding: 0;
 }
 
+input,
+textarea,
+select {
+    cursor: url('../assets/img/text-cursor.cur'), text !important;
+
+    &:focus {
+        cursor: url('../assets/img/text-cursor.cur'), text !important;
+    }
+
+    &:hover {
+        cursor: url('../assets/img/text-cursor.cur'), text !important;
+    }
+
+    &:active {
+        cursor: url('../assets/img/text-cursor.cur'), text !important;
+    }
+}
+
 /* Estilos de Google Maps */
+
+.contenedor-googlemaps {
+    cursor: url('../assets/img/hand.cur'), grab !important;
+
+    &:active {
+        cursor: url('../assets/img/hand-rock.cur'), grabbing !important;
+
+    }
+}
+
 .googlemaps {
     width: 100%;
     height: 100%;
     border-radius: 10px;
     border: 2px solid $color-blue;
+
 }
+
 
 /*--  MEDIA QUERIES  --*/
 @include media-max(1024px) {
