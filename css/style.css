@@ -298,13 +298,13 @@ h1 a {
   font-size: 40px;
 }
 
-.servicios-inicio {
+.servicios-inicio, .servicios-equipo {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px 80px;
 }
-.servicios-inicio img {
+.servicios-inicio img, .servicios-equipo img {
   width: 200px;
   height: auto;
   margin: 30px;
